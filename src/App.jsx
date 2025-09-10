@@ -17,20 +17,45 @@ function App() {
   const checkConnection = async () => {
     try {
       // Intentamos hacer un select simple a una tabla existente, por ejemplo 'clientes'
-      const { error } = await supabase.from('Clients').select('id').limit(1)
+      const { data, error } = await supabase.from('director').select('*').limit(1)
       if (error) {
         setStatus('Error de conexion')
       } else {
         setStatus('Conexion muy ok')
+        console.log(data);
       }
     } catch (e) {
       setStatus('Error de conexion')
     }
   }
 
+  // Necesitamos generar un formulario para añadir directores a la aplicación
+  const [newDirector, setNewDirector] = useState({ id: '', nombre: '', nacimiento: "", en_act: "" },)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setNewDirector({ ...newDirector, [name]: value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const { error } = await supabase.from('director').insert([newDirector])
+    if (error) {
+      setStatus('Error al añadir director')
+    } else {
+      setStatus('Director añadido con éxito')
+      setNewDirector({ name: '', age: '' })
+    }
+  }
+
+  // CRUD -> Create Read Update Delete
+
+
+
+  // PARA VER SI FUNCIONA SUPABASE
   console.log(supabase)
   console.log(status)
- 
+
   return (
     <>
       <div>
@@ -47,8 +72,16 @@ function App() {
           API HEALTH TEST
         </button>
         <p>
-          Bienvenido a el CRUD de textos con React y Vite
+          Bienvenido a el CRUD de directores con React y Vite
         </p>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="nombre" placeholder="Nombre" value={newDirector.nombre} onChange={handleInputChange} />
+            <input type="text" name="nacimiento" placeholder="Nacimiento" value={newDirector.nacimiento} onChange={handleInputChange} />
+            <input type="text" name="en_act" placeholder="En Activo" value={newDirector.en_act} onChange={handleInputChange} />
+            <button type="submit">Añadir Director</button>
+          </form>
+        </div>
       </div>
       <p className="read-the-docs">
         Gracias por visitar!
