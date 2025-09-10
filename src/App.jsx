@@ -30,11 +30,11 @@ function App() {
   }
 
   // Necesitamos generar un formulario para añadir directores a la aplicación
-  const [newDirector, setNewDirector] = useState({ id: '', nombre: '', nacimiento: "", en_act: "" },)
+  const [newDirector, setNewDirector] = useState({ id: '', nombre: '', nacimiento: "", en_activo: "" },)
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setNewDirector({ ...newDirector, [name]: value })
+    const { nombre, value } = e.target
+    setNewDirector({ ...newDirector, [nombre]: value })
   }
 
   const handleSubmit = async (e) => {
@@ -44,7 +44,7 @@ function App() {
       setStatus('Error al añadir director')
     } else {
       setStatus('Director añadido con éxito')
-      setNewDirector({ name: '', age: '' })
+      setNewDirector({ nombre: '', nacimiento: '', en_activo: '' })
     }
   }
 
@@ -57,7 +57,7 @@ function App() {
   console.log(status)
 
   return (
-    <>
+    <div className="App">
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -74,28 +74,66 @@ function App() {
         <p>
           Bienvenido a el CRUD de directores con React y Vite
         </p>
-        <div>
-          <form onSubmit={handleSubmit}>
-            <input type="text" name="nombre" placeholder="Nombre" value={newDirector.nombre} onChange={handleInputChange} />
-            <input type="text" name="nacimiento" placeholder="Nacimiento" value={newDirector.nacimiento} onChange={handleInputChange} />
-            <input type="text" name="en_act" placeholder="En Activo" value={newDirector.en_act} onChange={handleInputChange} />
-            <button type="submit">Añadir Director</button>
+
+
+        <div style={{ marginTop: "1em", padding: "1em", borderRadius: "8px", background: "#f9f9f9", boxShadow: "0 2px 8px #0001" }}>
+          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
+            <div>
+              <label htmlFor="nombre" style={{ fontWeight: "bold" }}>Nombre</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                value={newDirector.nombre}
+                onChange={handleInputChange}
+                style={{ width: "100%", padding: "0.5em", marginTop: "0.25em" }}
+              />
+            </div>
+            <div>
+              <label htmlFor="nacimiento" style={{ fontWeight: "bold" }}>Nacimiento dd/mm/aaaa</label>
+              <input
+                id="nacimiento"
+                type="text"
+                name="nacimiento"
+                placeholder="Nacimiento"
+                value={newDirector.nacimiento}
+                onChange={handleInputChange}
+                style={{ width: "100%", padding: "0.5em", marginTop: "0.25em" }}
+              />
+            </div>
+            <div>
+              <label htmlFor="en_act" style={{ fontWeight: "bold" }}>En Activo</label>
+              <input
+                id="en_act"
+                type="text"
+                name="en_act"
+                placeholder="En Activo"
+                value={newDirector.en_act}
+                onChange={handleInputChange}
+                style={{ width: "100%", padding: "0.5em", marginTop: "0.25em" }}
+              />
+            </div>
+            <button type="submit" style={{ padding: "0.75em", fontWeight: "bold", background: "#646cff", color: "#fff", border: "none", borderRadius: "4px", cursor: "pointer" }}>
+              Añadir Director
+            </button>
           </form>
+        
+
+        <p className="read-the-docs">
+          Gracias por visitar!
+        </p>
+        <footer>
+          <p>© 2025 Mi Aplicación</p>
+          <p>setStatus: {status}</p>
+        </footer>
+      
+
+
         </div>
       </div>
-      <p className="read-the-docs">
-        Gracias por visitar!
-      </p>
-      <footer>
-        <p>© 2025 Mi Aplicación</p>
-        <p>setStatus: {status}</p>
-      </footer>
-    </>
+    </div>
   )
 }
 
 export default App
-
-
-
-
