@@ -20,19 +20,19 @@ If you are developing a production application, we recommend using TypeScript wi
 **Obligatorio**
 ----------------------------------------------
 Proyecto Práctico Final Módulo 3
-Requisitos obligatorios
-Crear aplicación front con React / Angular / Vue / JS Vanilla (elige uno).
-Crear backend con Java Spring Boot / Node (Express/Fastify) / Supabase (elige uno).
-Implementar un modelo de datos mínimo Item con CRUD completo (crear, listar, ver, actualizar, borrar) y persistencia real.
-El frontend debe:
-Mostrar listado, detalle y formulario de alta/edición de Item.
-Consumir el backend real (no mocks) y manejar loading y errores.
-Implementar búsqueda de un Item concreto.
-Incluir un botón “Probar conexión” que consulta GET /api/health y muestra estado Conexión abierta/Sin conexión con la DB.
-README con instrucciones de arranque local, variables de entorno y rutas. Todo lo necesario para iniciar el proyecto debidamente.
-Pruebas básicas:
-Backend: 1 test de integración del CRUD o colección Postman con scripts.
-Control de versiones: repo público, commits pequeños y mensajes claros.
+*Requisitos obligatorios
+*Crear aplicación front con React / Angular / Vue / JS Vanilla (elige uno).
+*Crear backend con Java Spring Boot / Node (Express/Fastify) / Supabase (elige uno).
+*Implementar un modelo de datos mínimo Item con CRUD completo (crear, listar, ver, actualizar, borrar) y persistencia real.
+*El frontend debe:
+*Mostrar listado, detalle y formulario de alta/edición de Item.
+*Consumir el backend real (no mocks) y manejar loading y errores.
+*Implementar búsqueda de un Item concreto.
+*Incluir un botón “Probar conexión” que consulta GET /api/health y muestra estado Conexión abierta/Sin conexión con la DB.
+*README con instrucciones de arranque local, variables de entorno y rutas. Todo lo necesario para iniciar el proyecto debidamente.
+*Pruebas básicas:
+*Backend: 1 test de integración del CRUD o colección Postman con scripts.
+*Control de versiones: repo público, commits pequeños y mensajes claros.
 
 
 **Requisitos opcionales**
