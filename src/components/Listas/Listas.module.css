@@ -8,6 +8,11 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+header{
+  padding:8rem;
+  
+}
+
 h1 {
   text-align: center;
   color: #333;

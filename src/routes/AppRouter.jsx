@@ -1,6 +1,6 @@
 
 // src/AppRouter.jsx
-import { Routes, Route, Navigate, NavLink, Outlet } from 'react-router-dom'
+import { Routes, Route, Navigate, NavLink, Outlet, href } from 'react-router-dom'
 
 import Listas from '../components/Listas/Listas'
 import MyClients from '../components/MyClients/MyClients'
@@ -10,7 +10,8 @@ function Layout() {
     return (
 
         <>
-            <header style={{ padding: "12px 16px", borderBottom: "2px solid #eee" }}>
+            <header style={{ padding: "12px 16px", borderBottom: "2px solid #eee", center:"top"}}>
+            
                 <nav style={{ display: "flex", gap: 12 }}>
                     
                      <NavLink
@@ -38,7 +39,7 @@ function Layout() {
                    
                 </nav>
             </header>
-            <main style={{ padding: 16 }}>
+            <main style={{ padding: 700}}>
                 <Outlet />
             </main>
         </>
@@ -46,8 +47,8 @@ function Layout() {
 }
 
 function NotFound() {
-  return <p>404 · Ruta no encontrada</p>;
-}
+   return 
+ }
 
 
 export default function AppRouter() {

@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-image:"./public/195130(1).webp";
 }
 
 .logo {
@@ -44,4 +45,6 @@
   font-style: oblique;
   color: red;
 }
+
+
 
