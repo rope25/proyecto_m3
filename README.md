@@ -20,20 +20,28 @@ If you are developing a production application, we recommend using TypeScript wi
 **Obligatorio**
 ----------------------------------------------
 Proyecto Práctico Final Módulo 3
-*Requisitos obligatorios
+**Requisitos obligatorios**
+
 *Crear aplicación front con React / Angular / Vue / JS Vanilla (elige uno).
+Se ha escogido un front React, que es con el que se trabajo en el curso. 
 *Crear backend con Java Spring Boot / Node (Express/Fastify) / Supabase (elige uno).
+Se escogio crear un backend en Supabase
 *Implementar un modelo de datos mínimo Item con CRUD completo (crear, listar, ver, actualizar, borrar) y persistencia real.
-*El frontend debe:
+El modelo de CRUD permite realizar las cinco funciones y es persistente
+
+**El frontend debe:**
 *Mostrar listado, detalle y formulario de alta/edición de Item.
 *Consumir el backend real (no mocks) y manejar loading y errores.
 *Implementar búsqueda de un Item concreto.
 *Incluir un botón “Probar conexión” que consulta GET /api/health y muestra estado Conexión abierta/Sin conexión con la DB.
 *README con instrucciones de arranque local, variables de entorno y rutas. Todo lo necesario para iniciar el proyecto debidamente.
-*Pruebas básicas:
-*Backend: 1 test de integración del CRUD o colección Postman con scripts.
-*Control de versiones: repo público, commits pequeños y mensajes claros.
 
+*Pruebas básicas:
+
+*Backend: 1 test de integración del CRUD o colección Postman con scripts.
+
+*Control de versiones: repo público, commits pequeños y mensajes claros.
+Se realizaron diversos commits en puntos donde fueron consiguiendose requisitos de app 
 
 **Requisitos opcionales**
 -----------------------------------------------------
@@ -45,6 +53,8 @@ Accesibilidad mínima (foco visible, labels, contraste ≥ 4.5:1)
 Docker Compose (front + back + db en un comando)
 CI simple (GitHub Actions: lint + test + build)
 Despliegue (front en Netlify/Vercel; back en Render/Fly.io)
+
+
 Exponer en backend al menos:
 GET /api/health (ping de salud)
 GET /api/items?search=&page=&pageSize= (listado con búsqueda y paginación)
@@ -61,6 +71,21 @@ Construye “MyItems”, una app CRUD de un único recurso Item que permita:
 Crear, listar, buscar, ver, editar y borrar items.
 Atributos de Item:
 id, title (obligatorio), description (opcional), tags (array de strings), createdAt, updatedAt.
-La búsqueda filtra por title y tags vía ?search=....
+La búsqueda filtra por nombre de director vía ?search=....
+
+
 La paginación es de servidor (page, pageSize) y el front muestra controles (siguiente/anterior).
+
 Si la API devuelve error (400/404/500), el front muestra mensaje claro y recuperable.
+
+
+
+** EJECUCION DE LA APP**
+Descargar zip de app y descomprimirlo en equipo
+Situarse en la carpeta desde escritorio y escoger abrir con VS Code
+Dentro de VS Code abrir terminal
+Ejecutar el comando npm run dev
+Se accede a la pagina principal desde donde podras navegar hacia Listas o Area de clientes
+En listas puedes ejecutar todas las funciones propias de CRUD con filtro por nombre de director y hacer un test de conexion
+En MyCliens se ejecutaria un registro de usuario, pero no lo he implementado aun.
+

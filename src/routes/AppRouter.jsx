@@ -39,7 +39,7 @@ function Layout() {
                    
                 </nav>
             </header>
-            <main style={{ padding: 700}}>
+            <main style={{ padding: 70}}>
                 <Outlet />
             </main>
         </>

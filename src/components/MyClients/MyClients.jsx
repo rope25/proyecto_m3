@@ -20,7 +20,7 @@ export default function MyClients() {
 }}>
   {/* contenido del componente */}
 <h1>Mis Clientes</h1>
-
+<img src="potenkim.jpg" alt="fondo" />
 </div>
   
   ); 
