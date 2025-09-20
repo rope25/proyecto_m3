@@ -1,23 +1,12 @@
-## Día 1 (6–8 h)
------------------------------------------------------------------
+
+
+## 1 INSTALACIONES 
 Repo + README + elección de stack.
 Backend: esqueleto, /api/health, migración items, seed.
 Front: proyecto base (Vite/CLI), router, página Lista + botón “Probar conexión”.
 
-SUPABASE
+## 2 SUPABASE BACKEND
 Creada una tabla llamada directores
-
-![alt text](./images/image.png)
-
-
-
-
-##RLS
-ROW LEVEL SECURITY
-Creo tambien esta caracteristica de seguridad es atributo desde supabase
-// Row Level Security (RLS)
-alter table public.clientes enable row level security;
-
 
 ![alt text](./public/apirls.png)
 
@@ -33,6 +22,15 @@ export const supabase = createClient(
 process.env.NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxxxxxxxxxxx
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY=zzzzzzzzzzzz
 )
+
+  ## 2.1 RLS
+ROW LEVEL SECURITY
+Creo tambien esta caracteristica de seguridad es atributo desde supabase
+// Row Level Security (RLS)
+alter table public.clientes enable row level security;
+
+## 3 PROGRAMACION APP
+
 
 
 
@@ -62,3 +60,12 @@ Existen plantillas dentro de supabase para definir quien esta autorizado a reali
 
 Tambien se establecen formas alternativas de autentificar usuarios desde Supabase
 OAuth: Google, GitHub, GitLab, Azure AD, etc.
+
+
+
+## IMAGENES
+![APIHEALTH](./public/apirls.png)
+![ERRORES](./public/apirls.png)
+![INSTALACIONES INICIALES](./public/apirls.png)
+![POTENKIM](./public/potenkim.jpg)
+![DIRECTOR ACTUALIZADO](./public/directoractualizado.png)
