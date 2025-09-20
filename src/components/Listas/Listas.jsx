@@ -129,8 +129,6 @@ const checkConnection = async () => {
       <h1>CRUD de Directores</h1>
       <button onClick={checkConnection}className={styles.connectionButton}>Probar conexión</button>
 
-
-
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           name="nombre"
