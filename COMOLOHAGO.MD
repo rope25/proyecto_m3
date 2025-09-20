@@ -65,7 +65,10 @@ OAuth: Google, GitHub, GitLab, Azure AD, etc.
 
 ## IMAGENES
 ![APIHEALTH](./public/apirls.png)
-![ERRORES](./public/apirls.png)
-![INSTALACIONES INICIALES](./public/apirls.png)
+![ERRORES](./public/errores.png)
+![INSTALACIONES](./public/instalaciones.png)
+![INSTALACIONES INICIALES](./public/instalacionesiniciales.png)
 ![POTENKIM](./public/potenkim.jpg)
-![DIRECTOR ACTUALIZADO](./public/directoractualizado.png)
+![DIRECTORACTUALIZADO](./public/directoractualizado.png)
+![PRIMERAESCRITURADIRECTOR](./public/primera escritura director.jpg)
+![ERRORESCRITURADIRECTOR](./public/primer error escritura director.png)
