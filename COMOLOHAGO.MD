@@ -64,7 +64,7 @@ OAuth: Google, GitHub, GitLab, Azure AD, etc.
 
 
 ## IMAGENES
-![APIHEALTH](./public/apirls.png)
+![APIHEALTH](./public/apihealth.png)
 ![ERRORES](./public/errores.png)
 ![INSTALACIONES](./public/instalaciones.png)
 ![INSTALACIONES INICIALES](./public/instalacionesiniciales.png)
